@@ -150,8 +150,7 @@ df_2m12 <- df_2m12 %>% filter(!(rid %in% df_2sc$rid))
 df_2m12 <- df_2m12 %>% filter(!(rid %in% df_2m03$rid))
 df_2m12 <- df_2m12 %>% filter(!(rid %in% df_2m06$rid))
 
-# Continue adding until total obs is 816, then bind all together, we are at 815,
-# not sure what last one is but this is good enough
+# Bind the separate dataframes together
 df_bind <- rbind(df_sc,df_gom03,df_gom06,df_gom12,df_gom18,df_gom24,df_gom36,
                  df_gom48,df_2init,df_2m03,df_2m06,df_2m12,df_2sc)
 
